@@ -13,7 +13,15 @@
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- <script type="text/babel">
+      ReactDOM.render("Welcome to react", document.getElementById("root"));
+    </script> -->
+    <script>
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render("Welcome to react18");
+    </script>
   </head>
+
   <body>
     <h2>React App</h2>
     <noscript> Please Enable Javascript on your browser </noscript>
