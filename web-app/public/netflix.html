@@ -66,18 +66,37 @@
               and more
             </div>
             <div className="fs-5 mt-3">Starts at 149. Cancel at any time.</div>
+            <div className="d-flex justify-content-center">
+              <NetflixRegister />
+            </div>
           </main>
         );
       }
 
-      function NetflixRegister()
-      {
-        return(
-            <form>
-                 
-
-            </form> 
-        )
+      function NetflixRegister() {
+        return (
+          <form className="mt-4">
+            <div className="my-3">
+              Ready to watch? Enter your email to create or restart your
+              membership.
+            </div>
+            <div className="d-flex justify-content-center align-items-center">
+              <div>
+                <div className="input-group input-group-lg">
+                  <input
+                    type="email"
+                    placeholder="Your email address"
+                    className="form-control"
+                  />
+                  <button className="btn btn-danger" mx-3>
+                    Get started
+                    <span className=""></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        );
       }
 
       function NetflixIndex() {
