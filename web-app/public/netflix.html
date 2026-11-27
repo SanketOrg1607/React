@@ -15,27 +15,83 @@
     />
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 
+    <!-- Custom Style -->
+    <style>
+      body {
+        background-image: url("neflix_banner.jpg");
+        background-size: cover;
+      }
+      .shade {
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 100vh;
+      }
+      main {
+        padding-top: 100px;
+      }
+    </style>
+
     <!-- React Library -->
     <script src="../node_modules/react/umd/react.development.js"></script>
     <script src="../node_modules//react-dom//umd/react-dom.development.js"></script>
-    <script src="../node_modules/@babel/standalone/babel.js " type="text/babel">
 
-        function NetflixIndex(){
-          return(
-              <div className="shade">
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+
+    <script type="text/babel">
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<NetflixIndex />);
+
+      function NetflixHeader() {
+        return (
+          <header className="d-flex justify-content-between p-4 text-white">
+            <div className="fs-1 fw-bold text-danger">NETFLIX</div>
+            <div className="d-flex flex-row align-items-center">
+              <div className="input-group">
+                <span className="bi input-group-text      bi-translate"> </span>
+                <select className="form-select">
+                  <option value="">Language</option>
+                </select>
+                <button className="btn btn-danger mx-3">Signin</button>
               </div>
-          )
+            </div>
+          </header>
+        );
       }
 
+      function NetflixMain() {
+        return (
+          <main className="text-center text-white">
+            <div className="fs-1 fw-bold">
+              Unlimited movies, shows,
+              <br />
+              and more
+            </div>
+            <div className="fs-5 mt-3">Starts at 149. Cancel at any time.</div>
+          </main>
+        );
+      }
 
+      function NetflixRegister()
+      {
+        return(
+            <form>
+                 
 
+            </form> 
+        )
+      }
 
-        const root = ReactDOM.createRoot(document.getElementById("root"));
-        root.render(<NetflixIndex/>)
+      function NetflixIndex() {
+        return (
+          <div className="shade">
+            <NetflixHeader />
+            <NetflixMain />
+          </div>
+        );
+      }
     </script>
   </head>
   <body>
     <noscript>Please enable Javascript on your browser</noscript>
-    <div id="" root></div>
+    <div id="root"></div>
   </body>
 </html>
